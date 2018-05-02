@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--   <meta name="viewport" content="width=device-width; maximum-scale=1; minimum-scale=1;" /> -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <title>Python na UFABC</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500' rel='stylesheet' type='text/css'>
+    <link href="css/calendar.css" rel="stylesheet">
+    <link href="css/curso.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      
+      <div class="container">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.ufabc.edu.br/">UFABC</a>
+          <a class="navbar-brand" href="http://cmcc.ufabc.edu.br/">CMCC</a>
+          <a class="navbar-brand" href="http://proec.ufabc.edu.br/">PROEC</a>
+	</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <span class="sr-only">(current)</span></a></li>
+            <li><a href="software.html">Software</a></li>
+	    <li><a href="unidades.html">Unidades</a></li>
+	    <!-- <li class="dropdown">
+	      <a href="#a" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unidades&nbsp;<span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+		<li><a href="intro.html">Unidade 1</a></li>
+		<li><a href="decision.html">Unidade 2</a></li>
+		<!-- <li><a href="#links">Links</a></li> -|->
+	      </ul>
+            </li> -->
+	    <!-- <li><a href="u2/index.html">Estatística</a></li>
+	    <li><a href="u3/index.html">Programação</a></li>
+	    <li><a href="u4/index.html">Gráficos</a></li> -->
+          </ul>
+	  
+	  <!-- ################################################################## DROPDOWN LIST ON THE RIGHT #################### -->
+           <ul class="nav navbar-nav navbar-right">
+               <li class="dropdown">
+		 <a href="#a" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ir para&nbsp;<span class="caret"></span></a>
+		 <ul class="dropdown-menu">
+		   <li><a href="#info">Informações</a></li>
+		   <li><a href="#calendar">Calendário</a></li>
+		   <li><a href="#program">Programa das aulas</a></li>
+		   <!-- <li><a href="#bibliography">Bibliografia</a></li> -->
+		   <li><a href="#maisInfo">Demais informações</a></li>
+		   <li><a href="#contact">Contato</a></li>
+		   <!-- <li><a href="http://tidia4.ufabc.edu.br/portal/directtool/436dc26f-5f95-4c92-be18-9813d5fa68ad/" target="_blank">Tidia</a></li> -->
+		 </ul>
+               </li>
+
+
+          </ul> 
+	</div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="jumbotron" id="homelink">
+      <div class="container">
+	<h1>Programação em Python para Iniciantes</h1>
+	<h2>Curso de Extensão na Universidade Federal do ABC</h2>
+	<!-- <h3><i>Profa. Cristiane Sato &nbsp;e&nbsp; Prof. Daniel Martin</i></h3> --><!-- <h3>Prof. Daniel M. Martin</h3> <div style="float: right; color: red;"><h3>REC: sábado, dia 17/10 às 10:00 AM, na sala L504 do Bloco B (a mesma das aulas).</h3></div> -->
+      </div>
+      <!-- <a href="https://en.wikipedia.org/wiki/M._C._Escher"><img src="img/mce2.png" class="mce"/></a> -->
+    </div>
+
+
+    <p style="color: red; font-size: 1.3em; text-align: center; padding: 1em;"><b>Atenção à mudança de sala:</b> câmpus Santo André da UFABC, no laboratório de informática L409-2, Bloco A, Torre 2, 4º andar. (É ao lado da sala antiga.)</p>
+    
+    <div class="container">
+      <h2>Mensagem a todos os inscritos</h2>
+      <hr>
+      
+      <p>Prezados inscritos,</p>
+
+      <p>As inscrições do curso foram encerradas e nós terminamos o processo seletivo.</p>
+
+      <p>Foi uma tarefa bastante difícil pois eram muitos os bons candidatos e lamentamos se você não teve sua inscrição aprovada. Aqueles que tiverem interesse, fiquem atentos a este site do minicurso pois divulgaremos aqui todo o material didático que vamos usar em sala.</p>
+
+      <p>Os candidatos que tiveram suas inscrições aprovadas já foram notificados. Não conseguimos mandar uma mensagem personalizada pelo sistema aos candidatos com inscrições indeferidas.</p>
+
+      <p>Obrigado a todos pelo interesse.</p>
+
+      <p>Cordialmente,<br>
+	Profs. Daniel e Mirtha</p>
+
+    </div>
+    
+    <div class="container" id="info">
+      <h2>Informações</h2>
+      <hr>
+
+      <h3>Sobre o curso</h3>
+
+      <p>Este curso de extensão tem como objetivo principal o desenvolvimento de algumas habilidades básicas de programação: atribuições, condicionais, laços, funções e manipulação de arquivos. A linguagem escolhida para o curso  será Python por ser de fácil aprendizado, versátil e de código aberto. Além disso, atualmente Python é a quarta linguagem em termos de popularidade (segundo o ranking da TIOBE Programming Community), sendo utilizada para desenvolvimento web, sistemas, pesquisa científica, etc.</p>
+
+      <p>Todas as aulas serão práticas, de três horas semanais, e serão realizadas em um laboratório didático de Informática da UFABC. O instrutor irá apresentar o conceito de cada aula por meio de exemplos, que os cursistas poderão replicar no computador. Em seguida o instrutor irá propor atividades que requerem o entendimento dos conceitos abordados nos exemplos e irá acompanhar os cursistas no desenvolvimento dessas atividades.</p>
+
+      <p>Estamos ofertando 40 vagas, sendo 15 para técnicos e discentes da UFABC e 25 para o público externo à universidade.</p>
+
+      <h3>Professores</h3>
+
+      <ul>
+	<li>Prof. Daniel M. Martin</li>
+	<li>Profa. Mirtha L. F. Venero</li>
+      </ul>
+
+      <h3>Período</h3>
+
+      <p>De 4/08 a 25/08 e de 22/09 a 20/10 com encontros às sextas-feiras, das 14h às 17h (veja o <a href="#calendar">calendário</a>).</p>
+
+      <h3>Local</h3>
+
+      <p>Câmpus Santo André da UFABC, no laboratório didático de informática L407-2.</p>
+
+      <h3>Inscrição</h3>
+
+      <p>O período de inscrições está se aproximando: 01/07 até 31/07.</p>
+      <p>Para fazer a inscrição neste curso, você deverá fazer um cadastro no sistema <i>SIGAA Public</i>. As instruções para fazer o cadastro são as seguintes:</p>
+
+      <ul>
+	<li>entre no sistema <a href="https://sig.ufabc.edu.br/sigaa/public/extensao/loginCursosEventosExtensao.jsf"><i>SIGAA Public</i></a>,</li> 
+	<li>clique em “Ainda não possuo cadastro”,</li> 
+	<li>insira os dados nos campos marcados com uma estrelinha (<img src="img/required.gif"/>) e clique em “Cadastrar”,</li>
+	<li>acesse a conta de e-mail que você informou no cadastro e clique no link para confirmar seu cadastro.</li>
+      </ul>
+      
+      <p>Uma vez feito o cadastro, durante o período de inscrição (de 01/07 até 31/07), você pode se inscrever no curso fazendo o seguinte:</p>
+
+      <ul>
+	<li>entre no sistema <a href="https://sig.ufabc.edu.br/sigaa/public/extensao/loginCursosEventosExtensao.jsf"><i>SIGAA Public</i></a>,</li> 
+	<li>insira o nome e a senha e clique em “Entrar”,</li> 
+	<li>à esquerda, clique em “Cursos e Eventos Abertos",</li>
+	<li>clique em “inscrever-se" no Curso de Extensão: Programação em Python para Iniciantes.</li>
+      </ul>
+      
+    </div>
+    
+    <div class="container" id="calendar">
+      <h2>Calendário</h2>
+      <hr>
+      
+      <div class="centered">
+	<table class="onemonth">
+          <thead> 
+            <tr> <th class="monthname" colspan="7">A G O S T O</th> </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="header_holyday">DOM</td>
+              <td class="header_weekday">SEG</td>
+              <td class="header_weekday">TER</td>
+              <td class="header_weekday">QUA</td>
+              <td class="header_weekday">QUI</td>
+              <td class="header_weekday">SEX</td>
+              <td class="header_weekday">SAB</td>
+            </tr>
+            <tr style="height: 6px;"> <td colspan="7"> </td> </tr>
+            <tr>
+              <td class="holyday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> 1 </td>
+              <td class="weekday"> 2 </td>
+              <td class="weekday"> 3 </td>
+              <td class="workday"> 4 </td>
+              <td class="weekday"> 5 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 6 </td>
+              <td class="weekday"> 7 </td>
+              <td class="weekday"> 8 </td>
+              <td class="weekday"> 9 </td>
+              <td class="weekday"> 10 </td>
+              <td class="workday"> 11 </td>
+              <td class="weekday"> 12 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 13 </td>
+              <td class="weekday"> 14 </td>
+              <td class="weekday"> 15 </td>
+              <td class="weekday"> 16 </td>
+              <td class="weekday"> 17 </td>
+              <td class="workday"> 18 </td>
+              <td class="weekday"> 19 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 20 </td>
+              <td class="weekday"> 21 </td>
+              <td class="weekday"> 22 </td>
+              <td class="weekday"> 23 </td>
+              <td class="weekday"> 24 </td>
+              <td class="workday"> 25 </td>
+              <td class="weekday"> 26 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 27 </td>
+              <td class="weekday"> 28 </td>
+              <td class="weekday"> 29 </td>
+              <td class="weekday"> 30 </td>
+              <td class="weekday"> 31 </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+            </tr>
+            <tr>
+              <td class="holyday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+            </tr>
+          </tbody>
+        </table>
+
+	<table class="onemonth">
+          <thead> 
+            <tr> <th class="monthname" colspan="7">S E T E M B R O</th> </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="header_holyday">DOM</td>
+              <td class="header_weekday">SEG</td>
+              <td class="header_weekday">TER</td>
+              <td class="header_weekday">QUA</td>
+              <td class="header_weekday">QUI</td>
+              <td class="header_weekday">SEX</td>
+              <td class="header_weekday">SAB</td>
+            </tr>
+            <tr style="height: 6px;"> <td colspan="7"> </td> </tr>
+            <tr>
+              <td class="holyday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> 1 </td>
+              <td class="weekday"> 2 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 3 </td>
+              <td class="weekday"> 4 </td>
+              <td class="weekday"> 5 </td>
+              <td class="weekday"> 6 </td>
+              <td class="holyday"> 7 </td>
+              <td class="weekday"> 8 </td>
+              <td class="weekday"> 9 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 10 </td>
+              <td class="weekday"> 11 </td>
+              <td class="weekday"> 12 </td>
+              <td class="weekday"> 13 </td>
+              <td class="weekday"> 14 </td>
+              <td class="weekday"> 15 </td>
+              <td class="weekday"> 16 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 17 </td>
+              <td class="weekday"> 18 </td>
+              <td class="weekday"> 19 </td>
+              <td class="weekday"> 20 </td>
+              <td class="weekday"> 21 </td>
+              <td class="workday"> 22 </td>
+              <td class="weekday"> 23 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 24 </td>
+              <td class="weekday"> 25 </td>
+              <td class="weekday"> 26 </td>
+              <td class="weekday"> 27 </td>
+              <td class="weekday"> 28 </td>
+              <td class="workday"> 29 </td>
+              <td class="weekday"> 30 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+            </tr>
+          </tbody>
+        </table>
+
+	<table class="onemonth">
+          <thead> 
+            <tr> <th class="monthname" colspan="7">O U T U B R O</th> </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="header_holyday">DOM</td>
+              <td class="header_weekday">SEG</td>
+              <td class="header_weekday">TER</td>
+              <td class="header_weekday">QUA</td>
+              <td class="header_weekday">QUI</td>
+              <td class="header_weekday">SEX</td>
+              <td class="header_weekday">SAB</td>
+            </tr>
+            <tr style="height: 6px;"> <td colspan="7"> </td> </tr>
+            <tr>
+              <td class="holyday"> 1 </td>
+              <td class="weekday"> 2 </td>
+              <td class="weekday"> 3 </td>
+              <td class="weekday"> 4 </td>
+              <td class="weekday"> 5 </td>
+              <td class="workday"> 6 </td>
+              <td class="weekday"> 7 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 8 </td>
+              <td class="weekday"> 9 </td>
+              <td class="weekday"> 10 </td>
+              <td class="weekday"> 11 </td>
+              <td class="holyday"> 12 </td>
+              <td class="weekday"> 13 </td>
+              <td class="weekday"> 14 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 15 </td>
+              <td class="weekday"> 16 </td>
+              <td class="weekday"> 17 </td>
+              <td class="weekday"> 18 </td>
+              <td class="weekday"> 19 </td>
+              <td class="workday"> 20 </td>
+              <td class="weekday"> 21 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 22 </td>
+              <td class="weekday"> 23 </td>
+              <td class="weekday"> 24 </td>
+              <td class="weekday"> 25 </td>
+              <td class="weekday"> 26 </td>
+              <td class="weekday"> 27 </td>
+              <td class="holyday"> 28 </td>
+            </tr>
+            <tr>
+              <td class="holyday"> 29 </td>
+              <td class="weekday"> 30 </td>
+              <td class="weekday"> 31 </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+            </tr>
+            <tr>
+              <td class="holyday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+              <td class="weekday"> &nbsp; </td>
+            </tr>
+          </tbody>
+        </table>
+
+	
+      </div>
+      
+      <p>Encontros: 04/08, 11/08, 18/08, 25/08, 22/09, 29/09, 06/10 e 20/10.</p>
+      <!-- <p>Para maiores informações, consulte o <a href="http://www.ufabc.edu.br/images/stories/comunicacao/Boletim/consuni_ato_decisorio_149_anexo.pdf">Calendário Acadêmico da Graduação</a> da UFABC.</p> -->
+    </div>
+
+    
+    <div class="container" id="program">
+      <h2>Programa das aulas</h2>
+      <hr>
+
+      <ol>
+	<li><b>Introdução.</b>
+	  <p>Pequeno histórico de Python. Versões do Python. O console do Python3. Fazendo Contas no Python. Variáveis. Programas em Python (num arquivo .py). Rodando programas em Python no terminal (bash no Linux, prompt do Windows). Ambientes de desenvolvimento para Python3 (IDLE, PyCharm, Jupyter).</p></li>
+	<li><b>Entrada e saída.</b>
+	  <p>A função <code>print()</code>. Dados de texto versus dados numéricos. Concatenação de textos. Conversões (texto &harr; número). A função <code>input()</code>. O modulo math (\(\pi\), \(sin\), \(cos\), etc.).</p></li>
+	<li><b>Condicionais.</b>
+	  <p>Comparações numéricas e de textos (lexicográficas). Testando condições. O comando <code>if</code>. O comando <code>if..else
+</code>. Operadores lógicos (and, or, not). O comando <code>if..elif..else</code>.</p></li>
+	<li><b>Repetições I.</b>
+	  <p>O comando <code>while</code>.</p></li>
+	<li><b>Repetições II.</b>
+	  <p>Listas. O comando <code>for</code>.</p></li>
+	<li><b>Funções.</b>
+	  <p>Definição de funções. Chamada de funções. Recursão.</p></li>
+	<li><b>Arquivos.</b>
+	  <p>Leitura de arquivos. Escrita em arquivos. Entrada e saída padrões. Redirecionamento de arquivos no bash/prompt.</p></li>
+	<li><b>Mini projeto.</b>
+	  <p>Um pequeno projetinho envolvendo os conceitos estudados durante o curso.</p></li>
+      </ol>
+    </div>
+    
+   <!-- <div class="container" id="bibliography">
+      <h2>Bibliografia</h2>
+      <hr>
+
+ 
+
+    </div> -->
+    
+    <div class="container" id="maisInfo">
+      <h2>Demais informações</h2>
+      <hr>
+
+      <h3>Certificado</h3>
+      
+      <p>Pediremos aos cursistas que entreguem as atividades desenvolvidas em cada dia de aula e será considerado apto a receber o certificado a pessoa que entregar, no prazo estabelecido, pelo menos 75% das atividades. </p>
+    </div>
+
+    <!-- Footer
+	 ================================================== -->
+    <div class="myfooter" id="contact">
+      <div class="myspacer">&nbsp;</div>
+      <div class="container">
+	<div style="float: left;">
+	  <h3 class="wonb">Contato</h3>
+	  <address>
+	    <a href="http://cmcc.ufabc.edu.br/index.php/daniel-morgato-martin" target="_blank">Prof. Daniel M. Martin</a><br>
+	    <a href="http://cmcc.ufabc.edu.br/" target="_blank">Centro de Matemática Computação e Cognição</a><br>
+	    <a href="http://www.ufabc.edu.br/" target="_blank">Universidade Federal do ABC</a><br> 
+	    <span class="wonb" id="myAddress">Sala 536-2, Torre 2, Bloco A, Santo André, SP</span></br>
+	    <span class="wonb" id="myEmailAddress">my email</span><br>
+	    <span class="wonb" id="myPhoneNumber">my phone number</span><br>
+	  </address>
+	</div>
+      </div>
+    </div>
+
+
+    <script>
+      var email = "daniel.martin@" + "ufab" + "c.edu.br";
+      document.getElementById("myEmailAddress").innerHTML = 'Email: <a href="mailto:' + email + '">' + email + '</a>';
+      document.getElementById("myPhoneNumber").innerHTML = "Tel.: (11) 4996" + "-8332";
+    </script>
+    <script type="text/javascript" async
+	    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/myscroll.js"></script>
+    <script>
+      var toggleCollapsible = function(e) {
+        var $this = $(this);
+        if(!$this.hasClass('panel-collapsed')) {
+          $this.parents('.panel').find('.panel-body').slideUp();
+          $this.addClass('panel-collapsed');
+          $this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+        } else {
+          $this.parents('.panel').find('.panel-body').slideDown();
+          $this.removeClass('panel-collapsed');
+          $this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+        }
+      };
+      
+      $(document).on('click', '.panel-heading span.clickable', toggleCollapsible);
+      //document.getElementById("toggleClassPlan").click();
+      //document.getElementById("palestraGuilherme").click();
+    </script>
+  </body>
+</html>

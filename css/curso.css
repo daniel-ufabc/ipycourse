@@ -1,0 +1,343 @@
+.clickable{
+    cursor: pointer;   
+}
+
+.panel-heading span {
+	margin-top: -20px;
+	font-size: 15px;
+}
+
+td a {
+    display:block;
+    width:100%;
+}
+
+/*
+pre, xmp, plaintext, listing {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}*/
+
+.highlight {
+    background: rgba(255, 250, 0, 0.6);
+    padding: 2px 3px;
+    margin: -2px -3px;
+    // line-height: 1.7;
+    border-radius: 6px;
+    // display:inline-block;
+}
+
+.reduced-80 {
+    width: 80%;
+    display: inline-block;
+}
+
+.reduced-35 {
+    width: 35%;
+    display: inline-block;
+}
+
+
+.myspacer {
+  margin-top: 2em; 
+}
+
+.wonb {
+    color: #9d9d9d;
+}
+
+.myfooter {
+    width: 100%;
+    background-color: #222;
+    // color: white;
+
+}
+
+kbd {
+  background-color: #303030;
+  text-transform: uppercase;
+  padding-bottom: 0;
+}
+
+/*
+kbd.plain {
+  color: #333333;
+  background-color: rgba(255,255,255,0);
+  text-transform: none;
+  box-shadow: none;
+  padding: 0;
+  font-size: large;
+} */
+
+pre {
+    font-size: large;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: large;
+    padding-top: 50px;
+}
+
+p.centered {
+    text-align: center;
+}
+
+p.just {
+    text-align: justify;
+}
+
+b, h1, h2, h3 {
+    font-weight: 400;
+}
+
+.narrow {
+    width: 400px;
+}
+
+.mce {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+th {
+    font-weight: 400;
+    text-align: center;
+}
+
+.onemonth {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.17);
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.centered {
+    text-align: center;
+    margin: 1em;
+    margin-bottom: 2em;
+}
+
+
+
+img.imgbtn {
+    border: 1px solid lightgrey;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.jumbotron {
+    position: relative;
+    opacity: 1.0;
+    background: url("../img/tiling3.png") repeat-x;
+    padding-bottom: 1em;
+    // border-radius: 0px 0px 50px 50px;
+}
+
+.jumbotron > .container {
+    background-color: rgba(200, 200, 200, 0.4);
+}
+
+.jumbotron > .container > h3 {
+    opacity: 1.0;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.jumbotron > .container > h2 {
+    opacity: 1.0;
+    font-size: 38px;
+    font-weight: 300;
+}
+
+.jumbotron > .container > h1 {
+    opacity: 1.0;
+    font-size: 54px;
+    font-weight: 400;
+}
+
+/* Large desktop */
+@media (min-width: 993px) {
+    .navbar > .container {
+	max-width: 90%;
+	// min-width: 1024px;
+	width: 85%;
+    }
+    
+    body > .container, .jumbotron > .container {
+	border: 1px solid lightgrey;
+	margin-bottom: 2em;
+	padding-bottom: 1em;
+	max-width: 90%;
+	// min-width: 1024px;
+	width: 85%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .myfooter > .container {
+	padding-bottom: 1em;
+	max-width: 90%;
+	// min-width: 1024px;
+	width: 85%;
+    }
+    
+   .jumbotron > .container {
+       background-color: rgba(200, 200, 200, 0.4);
+   }
+
+   .jumbotron > .container > h3 {
+       opacity: 1.0;
+       font-size: 30px;
+       font-weight: 300;
+   }
+
+   .jumbotron > .container > h2 {
+       opacity: 1.0;
+       font-size: 38px;
+       font-weight: 300;
+   }
+
+   .jumbotron > .container > h1 {
+       opacity: 1.0;
+       font-size: 54px;
+       font-weight: 400;
+   }
+}
+
+iframe {
+    display: block;
+    margin: 1em auto;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 992px) {
+    .reduced-35 {
+	width: 50%;
+	display: inline-block;
+    }
+    
+    /* smaller margin */
+    .navbar > .container {
+	// max-width: 90%;
+	// min-width: 1024px;
+	// width: 90%;
+    }
+	
+    body > .container, .jumbotron > .container {
+	border: 1px solid #DDDDDD;
+	margin-bottom: 2em;
+	padding-bottom: 1em;
+	padding-left: 10px;
+	padding-right: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .myfooter > .container {
+	padding-bottom: 1em;
+	padding-left: 10px;
+	padding-right: 10px;
+    }
+
+    .jumbotron > .container {
+       background-color: rgba(200, 200, 200, 0.4);
+    }
+
+   .jumbotron > .container > h3 {
+       opacity: 1.0;
+       font-size: 22px;
+       font-weight: 300;
+   }
+
+   .jumbotron > .container > h2 {
+       opacity: 1.0;
+       font-size: 30px;
+       font-weight: 300;
+   }
+
+   .jumbotron > .container > h1 {
+       opacity: 1.0;
+       font-size: 46px;
+       font-weight: 400;
+   }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    /* show map */
+
+    .reduced-80 {
+	width: 80%;
+	display: inline-block;
+    }
+
+    .reduced-35 {
+	width: 35%;
+	display: inline-block;
+    }
+
+    .navbar > .container {
+	// max-width: 90%;
+	// min-width: 0px;
+	width: 100%;
+    }
+
+    .jumbotron > .container {
+       background-color: rgba(200, 200, 200, 0);
+    }
+    
+    body > .container, .jumbotron > .container {
+	border: 0px;
+	margin-bottom: 0em;
+	padding-bottom: 1em;
+	padding-left: 5px;
+	padding-right: 5px;
+	// box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .myfooter > .container {
+	padding-bottom: 1em;
+	padding-left: 5px;
+	padding-right: 5px;
+    }
+
+   .jumbotron > .container > h3 {
+       opacity: 1.0;
+       font-size: 20px;
+       font-weight: 300;
+   }
+
+   .jumbotron > .container > h2 {
+       opacity: 1.0;
+       font-size: 28px;
+       font-weight: 300;
+   }
+
+   .jumbotron > .container > h1 {
+       opacity: 1.0;
+       font-size: 44px;
+       font-weight: 400;
+   }
+}
+
+/* phones and down */
+@media (max-width: 640px) {
+    .reduced-80 {
+	width: 100%;
+	display: inline-block;
+    }
+
+    .reduced-35 {
+	width: 70%;
+	display: inline-block;
+    }
+    
+    /* don't show map */
+    #map {
+	display: none;
+    }
+}

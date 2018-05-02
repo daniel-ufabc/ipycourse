@@ -1,0 +1,160 @@
+/*
+
+th:first-child {
+    -moz-border-radius: 4px 0 0 0;
+    -webkit-border-radius: 4px 0 0 0;
+    border-radius: 4px 0 0 0;
+}
+
+th:last-child {
+    -moz-border-radius: 0 4px 0 0;
+    -webkit-border-radius: 0 4px 0 0;
+    border-radius: 0 4px 0 0;
+}
+
+*/
+
+th:only-child {
+    padding: 4px;
+/*    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0; */
+}
+
+/*
+body {
+    background-color: linen;
+}
+
+p {
+    font-size: large;
+}
+*/
+
+table.outer
+{
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+table.onemonth
+{
+    margin: 15px;
+    display: inline-block;
+    border-spacing: 0px;
+/*    -moz-border-radius: 6px 6px 6px 6px;  
+    -webkit-border-radius: 6px 6px 6px 6px; 
+    border-radius: 6px 6px 6px 6px;  */
+    border:1px solid black; 
+    padding: 2px;  
+    -webkit-padding-before: 2px;
+
+    width: auto;
+/*    border: 1px solid;
+    border-radius: 6px 6px 6px 6px;
+    border-spacing: 0px; */
+    background-color: white;
+}
+
+th.monthname
+{
+    background-color: #222; // #0e0635;
+    color: white;
+}
+
+/*
+th.monthnamealt
+{
+background-color: #6699FF;
+color:white;
+}
+*/
+
+
+td.monthname
+{
+    padding: 1px;
+    text-align: center;
+    height: 24px;
+    /* font-size: small; */
+    font-weight: bold;
+}
+
+
+td.holyday, td.workday, td.testday, td.weekday 
+{
+    padding: 4px;
+}
+
+td.header_weekday, td.header_holyday
+{
+    padding: 2px 5px 2px 5px;
+}
+
+td.holyday
+{
+    height: 20px;
+    text-align: center;
+    color: #FF0000;
+    font-weight: 700;
+    font-size: large;
+}
+
+td.workday
+{
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: lavender;    
+    -moz-border-radius: 8px 8px 8px 8px;  
+    -webkit-border-radius: 8px 8px 8px 8px; 
+    border-radius: 8px 8px 8px 8px;     
+}
+
+td.testday
+{
+    height: 20px;
+    text-align: center; 
+    font-size: large; 
+    color: #FFFFFF; 
+    font-weight: 700; 
+    background-color: #FF0000;    
+    -moz-border-radius: 8px 8px 8px 8px;  
+    -webkit-border-radius: 8px 8px 8px 8px; 
+    border-radius: 8px 8px 8px 8px;     
+    /* border: 2px solid black; */
+
+}
+
+td.weekday
+{
+    text-align: center;
+    color: rgb(153, 153, 153);
+    font-size: large;
+    height: 20px;
+}
+
+td.header_weekday
+{
+    height: 20px;
+    width: 35px;
+    text-align: center;
+    font-size: small;
+    font-weight: bold; 
+    color: white;
+ /*   font-weight: bold; */
+    background-color: #BBBBBB; // #662f51;
+}
+
+td.header_holyday
+{
+    text-align: center;
+    font-size: small;
+    font-weight: bold; 
+/*    background-color: orchid; */
+    background-color: #BBBBBB; // #662f51;
+    color: white;
+    height: 20px;
+    width: 35px;
+}

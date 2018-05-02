@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--   <meta name="viewport" content="width=device-width; maximum-scale=1; minimum-scale=1;" /> -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <title>Python na UFABC</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500' rel='stylesheet' type='text/css'>
+    <link href="css/calendar.css" rel="stylesheet">
+    <link href="css/curso.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      
+      <div class="container">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.ufabc.edu.br/">UFABC</a>
+          <a class="navbar-brand" href="http://cmcc.ufabc.edu.br/">CMCC</a>
+          <a class="navbar-brand" href="http://proec.ufabc.edu.br/">PROEC</a>
+	</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#">Software</a></li>
+	    <li><a href="unidades.html">Unidades</a></li>
+	    <!--  <li><a href="u2/index.html">Estatística</a></li>
+		  <li><a href="u3/index.html">Programação</a></li>
+	    <li><a href="u4/index.html">Gráficos</a></li> -->
+          </ul>
+	  
+	  <!-- ################################################################## DROPDOWN LIST ON THE RIGHT #################### -->
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+	      <a href="#a" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ir para&nbsp;<span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+		<li><a href="#anaconda">Anaconda</a></li>
+		<li><a href="#linux">GNU/Linux</a></li>
+		<li><a href="#running">O Jupyter</a></li>
+		<!-- <li><a href="#bibliography">Bibliografia</a></li> -->
+		<li><a href="#options">Alternativas</a></li>
+		<li><a href="#contact">Contato</a></li>
+		<!-- <li><a href="http://tidia4.ufabc.edu.br/portal/directtool/436dc26f-5f95-4c92-be18-9813d5fa68ad/" target="_blank">Tidia</a></li> -->
+	      </ul>
+            </li>
+
+
+          </ul> 
+	</div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="jumbotron" id="homelink">
+      <div class="container">
+	<h1>Programação em Python para Iniciantes</h1>
+	<h2>Curso de Extensão na Universidade Federal do ABC</h2>
+	<!-- <h3><i>Profa. Cristiane Sato &nbsp;e&nbsp; Prof. Daniel Martin</i></h3> --><!-- <h3>Prof. Daniel M. Martin</h3> <div style="float: right; color: red;"><h3>REC: sábado, dia 17/10 às 10:00 AM, na sala L504 do Bloco B (a mesma das aulas).</h3></div> -->
+      </div>
+      <!-- <a href="https://en.wikipedia.org/wiki/M._C._Escher"><img src="img/mce2.png" class="mce"/></a> -->
+    </div>
+
+    <div class="container" id="anaconda">
+      <h1>Instala&ccedil;&atilde;o via o Anaconda</h1>
+      
+      <hr />
+      <p>A maneira mais f&aacute;cil de instalar os softwares necess&aacute;rios para acessar o conteúdo das aulas no seu computador pessoal &eacute; instalando o pacote Anaconda, dispon&iacute;vel para download no site <a href="https://www.continuum.io/downloads" target="_blank">https://www.continuum.io/downloads</a>. Clique nesse link, v&aacute; at&eacute; a se&ccedil;&atilde;o correspondente ao seu sistema operacional, e selecione <b>Python 3.6</b>.</p>
+    </div>
+
+    <div class="container" id="linux">
+      <h1>Instala&ccedil;&atilde;o via o gerenciador de pacotes</h1>
+
+      <hr />
+      <p>Vamos supor que voc&ecirc; esteja usando uma distribui&ccedil;&atilde;o do GNU/Linux que seja o Ubuntu ou uma distribui&ccedil;&atilde;o derivada do Ubuntu.</p>
+
+      <p>Abra um terminal (pelo menu ou digitando <kbd>Ctrl+Alt+T</kbd>).</p>
+
+      <p>Primeiro, certifique-se de que o reposit&oacute;rio <code>universe</code> est&aacute; habilitado e atualize a lista de pacotes instal&aacute;veis. Isso pode ser feito com os comandos:</p>
+
+      <pre>
+	sudo add-apt-repository universe
+	sudo apt-get update </pre>
+
+      <p>Depois instale os seguintes pacotes:</p>
+
+      <pre>
+	sudo apt-get install python3-setuptools python3-pip libfreetype6-dev python-dev -y
+	sudo apt-get install pandoc texlive-latex-base texlive-xetex \
+	    texlive-fonts-recommended texlive-generic-recommended -y  </pre>
+
+      <p>Os pacotes instalados na segunda linha s&atilde;o necess&aacute;rios se você quiser ter a opção de gerar arquivos <code>.pdf</code> a partir de arquivos notebook <code>.ipynb</code>.</p>
+
+      <p>Finalmente, atualize o pip e instale o Jupyter e a biblioteca matplotlib.</p>
+
+      <pre>
+	sudo -H pip3 install --upgrade pip 
+	sudo -H pip3 install jupyter notebook matplotlib  </pre>
+    </div>
+
+    <div class="container" id="running">
+      <h2>Jupyter Notebook</h2>
+
+      <hr />
+      <p>Para fazer as atividades desta unidade, vamos usar um software chamado <i>Jupyter Notebook</i>.</p>
+
+      <p>No&nbsp;laborat&oacute;rio onde voc&ecirc; assite &agrave;s aulas, supondo que voc&ecirc; esteja usando o Linux, basta abrir um terminal&nbsp; &ndash; atrav&eacute;s do menu lateral ou teclando&nbsp;<samp>Ctrl+Alt+T</samp> &ndash; e digitar:</p>
+
+      <pre>
+	jupyter notebook   </pre>
+
+      <p>Se voc&ecirc; est&aacute; no seu computador pessoal e&nbsp;tem o Anaconda instalado&nbsp;no Windows, &eacute; s&oacute; abrir <b>Programas &raquo; Anaconda &raquo; Jupyter Notebook</b>.</p>
+
+      <p>Aguarde a inicializa&ccedil;&atilde;o do servidor e a abertura de uma aba no navegador com o <i>Jupyter Home</i>.</p>
+
+      <div class="myspacer">&nbsp;</div>
+
+      <p class="centered"><img src="img/jupyter_home.png" /></p>
+
+      <div class="myspacer">&nbsp;</div>
+
+      <p>Se voc&ecirc; obteve sucesso at&eacute; este ponto, ignore a pr&oacute;xima se&ccedil;&atilde;o.</p>
+    </div>
+
+
+    <div class="container" id="options">
+      <h2>Alternativas</h2>
+
+      <hr />
+      <p>O ideal mesmo &eacute; voc&ecirc; usar o Jupyter Notebook instalado ne sua m&aacute;quina para fazer as atividades, pois é identico ao ambiente usando nas aulas, é mais rápido e dispensa o uso da internet.</p>
+
+      <p>Se voc&ecirc; n&atilde;o tiver sucesso ao instalar o Jupyter no seu computador, voc&ecirc; tem algumas alternativas.</p>
+
+      <ol>
+	<li>Você pode usar um servidor online do Jupyter Notebook chamado <a href="https://tmpnb.org/" target="_blank">https://tmpnb.org/</a>. Ap&oacute;s abrir o link, faça o upload do <i>notebook</i> usado nas aulas e prossiga como se voc&ecirc; tivesse aberto o Jupyter Notebook pelo Anaconda.&nbsp;</li>
+	<li>Outra op&ccedil;&atilde;o seria utilizar um servidor&nbsp;do Jupyter Notebook que configuramos na UFABC. Como é um servidor com recursos muito limitados, voc&ecirc; deve mandar uma mensagem ao professor responsável solicitando o acesso a esse servidor, e ele lhe enviar&aacute; uma mensagem contendo as instru&ccedil;&otilde;es.</li>
+	<li>Você também pode baixar a IDE <a href="https://www.jetbrains.com/pycharm/download/">PyCharm</a> que possui uma versão gratuita para uso pessoal. Nessa IDE, você poderá fazer programas em Python, mas não conseguirá abrir diretamente o <i>notebook</i> usado nas aulas. Nesse caso, para visualizar o <i>notebook</i>, use a versão HTML disponibilizada no site.  </li>
+      </ol>
+
+      <hr />
+      <p><b>Aten&ccedil;&atilde;o:</b> ao usar qualquer servidor de notebooks remoto, procure baixar uma c&oacute;pia do seu trabalho com frequ&ecirc;ncia atrav&eacute;s do menu <b><i>File &raquo; Download as &raquo; IPython Notebook (.ipynb)</i></b>.</p>
+    </div>
+
+
+    <!-- Footer
+	 ================================================== -->
+    <div class="myfooter" id="contact">
+      <div class="myspacer">&nbsp;</div>
+      <div class="container">
+	<div style="float: left;">
+	  <h3 class="wonb">Contato</h3>
+	  <address>
+	    <a href="http://cmcc.ufabc.edu.br/index.php/daniel-morgato-martin" target="_blank">Prof. Daniel M. Martin</a><br>
+	    <a href="http://cmcc.ufabc.edu.br/" target="_blank">Centro de Matemática Computação e Cognição</a><br>
+	    <a href="http://www.ufabc.edu.br/" target="_blank">Universidade Federal do ABC</a><br> 
+	    <span class="wonb" id="myAddress">Sala 536-2, Torre 2, Bloco A, Santo André, SP</span></br>
+	    <span class="wonb" id="myEmailAddress">my email</span><br>
+	    <span class="wonb" id="myPhoneNumber">my phone number</span><br>
+	  </address>
+	</div>
+      </div>
+    </div>
+
+
+    <script>
+      var email = "daniel.martin@" + "ufab" + "c.edu.br";
+      document.getElementById("myEmailAddress").innerHTML = 'Email: <a href="mailto:' + email + '">' + email + '</a>';
+      document.getElementById("myPhoneNumber").innerHTML = "Tel.: (11) 4996" + "-8332";
+    </script>
+    <script type="text/javascript" async
+	    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/myscroll.js"></script>
+    <script>
+      var toggleCollapsible = function(e) {
+      var $this = $(this);
+      if(!$this.hasClass('panel-collapsed')) {
+      $this.parents('.panel').find('.panel-body').slideUp();
+      $this.addClass('panel-collapsed');
+      $this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+      } else {
+      $this.parents('.panel').find('.panel-body').slideDown();
+      $this.removeClass('panel-collapsed');
+      $this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+      }
+      };
+      
+      $(document).on('click', '.panel-heading span.clickable', toggleCollapsible);
+      //document.getElementById("toggleClassPlan").click();
+      //document.getElementById("palestraGuilherme").click();
+    </script>
+  </body>
+</html>
